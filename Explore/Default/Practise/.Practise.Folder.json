@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "370Voe0SK4pf3rHB0VZr61",
+    "name" : "Practise",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Practise",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-03-03T15:26:56.434Z",
+  "objectRefs" : [ ]
+}
