@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "2F21SIinGd8gUy1u5jW9o2",
+    "name" : "BooksHierSchema2",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012GTZ36000000000004"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-06T21:43:52.800Z",
+  "objectRefs" : [ ]
+}

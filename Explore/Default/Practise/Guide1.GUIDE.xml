@@ -1,0 +1,88 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>HIppppppppppppp-gt-6142641-2024-03-06T21:36:08.854Z::gt.xml</types1:EntryId>
+      <types1:Name>Guide1</types1:Name>
+      <types1:MimeType>application/xml+screenflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
+      <types1:CreationDate>2024-03-06T21:36:09Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-06T21:36:11Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/sf.Guide1/Guide1.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <avosScreenflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                         xmlns:list="urn:activevos:spi:list:functions"
+                         allowRestart="true"
+                         displayName="Guide1"
+                         doneOnEndStep="false"
+                         name="Guide1"
+                         runAsUser="$current">
+            <description/>
+            <appliesTo/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="Name" name="Name" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="Greetings" name="Greetings" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <runOn target="desktop"/>
+            <notes/>
+            <deployment/>
+            <sendFeedback>
+               <emailTo/>
+            </sendFeedback>
+            <flow>
+               <startScreen id="jd300kk3">
+                  <title>Start</title>
+                  <body contentType="text/html"/>
+                  <actions>
+                     <action alt="" id="jd300kk3_ltgbgt6f" targetScreen="ltgbgt6f">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="true"/>
+               </startScreen>
+               <endScreen id="jd4cwa59">
+                  <title>End</title>
+                  <body contentType="text/html"/>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <assignment id="ltgbgt6f">
+                  <title>Assignment to Greetings</title>
+                  <operation source="constant" to="output.Greetings">{$input.Name}</operation>
+                  <actions>
+                     <action alt="" id="ltgbgt6f_jd4cwa59" targetScreen="jd4cwa59">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+            </flow>
+         </avosScreenflow>
+      </types1:Entry>
+      <types1:GUID>5knGUsHZC4ceGcGeatuZ8g</types1:GUID>
+      <types1:DisplayName>Guide1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-06T21:43:51.447Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

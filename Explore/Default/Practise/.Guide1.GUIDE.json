@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "5knGUsHZC4ceGcGeatuZ8g",
+    "name" : "Guide1",
+    "type" : "GUIDE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HIppppppppppppp-gt-6142641-2024-03-06T21:36:08.854Z::gt.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-06T21:43:52.802Z",
+  "objectRefs" : [ ]
+}

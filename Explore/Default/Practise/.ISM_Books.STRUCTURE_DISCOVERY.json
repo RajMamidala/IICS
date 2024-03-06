@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "2YUSx9QiZnIfxCyfx7OQui",
+    "name" : "ISM_Books",
+    "type" : "STRUCTURE_DISCOVERY",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012GTZ30000000000002"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-06T21:43:52.799Z",
+  "objectRefs" : [ ]
+}

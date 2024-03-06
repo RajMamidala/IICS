@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "5ldztTy4X8vbzqzDxxqoSn",
+    "name" : "ShipOrdersMultHierSchema",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012GTZ36000000000005"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Ship Orders Multple Hierarchical Schema",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-06T21:43:52.803Z",
+  "objectRefs" : [ ]
+}
