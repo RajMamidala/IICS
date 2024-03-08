@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "9sdA9bk2MgVbKjPKZEMHIX",
+    "name" : "Email-Service",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "abbgdoGsF4Xkgbd-gt-6671405-2024-03-08T19:49:58.013Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Email Service",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-08T23:00:10.778Z",
+  "objectRefs" : [ {
+    "id" : "f5kAaxQJYyLdL6xzj1FPwy",
+    "name" : "Email Service",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ygpKi9zhFtybdua-gt-6693803-2024-03-08T19:44:51.401Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Email Service",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Order Management/Lab Exercise"
+  } ]
+}

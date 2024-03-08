@@ -1,0 +1,92 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>QNvgeDXJqEhynzY-gt-6672607-2024-03-08T20:09:31.682Z::pd.xml</types1:EntryId>
+      <types1:Name>Send_Email</types1:Name>
+      <types1:ParentFlowIds>kSQciSrZMSPfXBi-gt-6398203-2024-03-07T19:11:29.165Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
+      <types1:CreationDate>2024-03-08T20:09:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-08T21:15:43Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Send_Email/Send_Email.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Send Email"
+                  name="Send_Email"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description=""
+                          name="EmailAddress"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Message" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="Email" type="reference">
+                  <options>
+                     <option name="referenceTo">Email-Service:Email_ServiceRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9sdA9bk2MgVbKjPKZEMHIX</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ltj2n4sj" targetId="ltj2n4si"/>
+               </start>
+               <assignment id="ltj2n4si">
+                  <title>Create Email</title>
+                  <operation source="field" to="temp.Email[1]/Message">input.Message</operation>
+                  <operation source="field" to="temp.Email[1]/SendTo">input.EmailAddress</operation>
+                  <link id="ltj2n4ss" targetId="ltj2n4sr"/>
+               </assignment>
+               <service id="ltj2n4sr">
+                  <title>Call Email Service</title>
+                  <serviceName>Email-Service:Email_ServiceOperation</serviceName>
+                  <serviceGUID>9sdA9bk2MgVbKjPKZEMHIX</serviceGUID>
+                  <serviceInput>
+                     <parameter name="body" source="field">temp.Email</parameter>
+                  </serviceInput>
+                  <link id="ltj2n4st" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>7QfpfGY9pAIiYEaJEe8jk0</types1:GUID>
+      <types1:DisplayName>Send Email</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-08T23:00:10.525Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

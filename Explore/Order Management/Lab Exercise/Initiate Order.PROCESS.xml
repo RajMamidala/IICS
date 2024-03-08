@@ -1,0 +1,210 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>kSQciSrZMSPfXBi-gt-6398203-2024-03-07T19:11:29.165Z::pd.xml</types1:EntryId>
+      <types1:Name>Initiate_Order</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
+      <types1:CreationDate>2024-03-07T19:11:29Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala999@gmail.com</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-08T21:15:39Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-08T21:15:43Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Initiate_Order/Initiate_Order.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Initiate Order"
+                  name="Initiate_Order"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="Name of the Customer"
+                          name="CustomerName"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="Email of the Customer"
+                          name="CustomerEmail"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="Name of the Item"
+                          name="ItemName"
+                          required="true"
+                          type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="Number of units of the item ordered"
+                          name="ItemCount"
+                          required="true"
+                          type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="Status of the Order" name="Status" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="Order tracking reference number"
+                      name="OrderID"
+                      type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="Price of the Item" name="ItemPrice" type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="Price of the order - Item Price * Item Count"
+                      name="OrderPrice"
+                      type="double">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="InventoryDetails" type="reference">
+                  <options>
+                     <option name="referenceTo">Get-Margin-Detail:Calculate_Margin_ServiceRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">2OQEkylUAp5gDtagebli6n</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedUsers>
+                     <user>RajMamidala999@gmail.com</user>
+                  </allowedUsers>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lthljdtu" targetId="ltj208p6"/>
+               </start>
+               <eventContainer id="ltj208p6">
+                  <service id="lthljdtt">
+                     <title>Get Inventory Detail</title>
+                     <serviceName>Get-Inventory-Detail:getInventoryDetail</serviceName>
+                     <serviceGUID>5NFjvmUjrVTh3Ah2OTT02p</serviceGUID>
+                     <serviceInput>
+                        <parameter name="ItemName" source="field" updatable="true">input.ItemName</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="ltj208p8">
+                     <assignment id="ltj208pm">
+                        <title>Assign Order Details</title>
+                        <operation source="constant" to="output.Status">Your order is accepted.</operation>
+                        <operation source="formula" to="output.OrderID">
+                           <expression language="XQuery">util:getProcessId()</expression>
+                        </operation>
+                        <operation source="field" to="output.ItemPrice">output.Item[1]/sellprice</operation>
+                        <operation source="formula" to="output.OrderPrice">
+                           <expression language="XQuery">$output.ItemPrice  * $input.ItemCount</expression>
+                        </operation>
+                        <operation source="field" to="temp.InventoryDetails[1]/ItemCostPrice">output.Item[1]/costprice</operation>
+                        <operation source="field" to="temp.InventoryDetails[1]/ItemCount">input.ItemCount</operation>
+                        <operation source="field" to="temp.InventoryDetails[1]/ItemSellingPrice">output.Item[1]/sellprice</operation>
+                        <operation source="field"
+                                   to="temp.InventoryDetails[1]/SalesCommissionInPercentage">output.Item[1]/commission</operation>
+                        <link id="ltj208q9" targetId="ltj208q8"/>
+                     </assignment>
+                     <service id="ltj208q8">
+                        <title>Get Margin Detail</title>
+                        <serviceName>Get-Margin-Detail:Calculate_Margin_ServiceOperation</serviceName>
+                        <serviceGUID>2OQEkylUAp5gDtagebli6n</serviceGUID>
+                        <serviceInput>
+                           <parameter name="body" source="field">temp.InventoryDetails</parameter>
+                        </serviceInput>
+                        <link id="ltj208qz" targetId="ltj208qq"/>
+                     </service>
+                     <container id="ltj208qq" type="parallel">
+                        <title>Send Emails</title>
+                        <flow id="ltj208qr">
+                           <subflow id="ltj208qs">
+                              <title>Send Email to Consumer</title>
+                              <subflowGUID>7QfpfGY9pAIiYEaJEe8jk0</subflowGUID>
+                              <subflowPath>Send_Email</subflowPath>
+                              <runForEach>false</runForEach>
+                              <input>
+                                 <parameter name="EmailAddress" source="field" updatable="true">input.CustomerEmail</parameter>
+                                 <parameter name="Message" source="constant" updatable="true">Dear {$input.CustomerName}, &lt;br&gt; Thanks for ordering. Your order ID is: {$output.OrderID}. &lt;br&gt;&lt;br&gt; We will deliver your order in 7 days</parameter>
+                              </input>
+                              <outputDef/>
+                           </subflow>
+                           <link id="ltj208qx" targetId="ltj208qq" type="containerLink"/>
+                        </flow>
+                        <flow id="ltj208qt">
+                           <subflow id="ltj208qu">
+                              <title>Send Email to Vendor</title>
+                              <subflowGUID>7QfpfGY9pAIiYEaJEe8jk0</subflowGUID>
+                              <subflowPath>Send_Email</subflowPath>
+                              <runForEach>false</runForEach>
+                              <input>
+                                 <parameter name="EmailAddress" source="constant" updatable="true">testvendor@mailinator.com</parameter>
+                                 <parameter name="Message" source="constant" updatable="true">Order has been accepted. The order ID is: {$output.OrderID}. &lt;br&gt;Please note below details for your records. &lt;br&gt;&lt;br&gt;Overall Profit: {$output.Calculate_Margin_ServiceResponse[1]/MarginBeforeCommission} &lt;br&gt;Sales Commission: {$output.Calculate_Margin_ServiceResponse[1]/SalesCommission} &lt;br&gt;Profit after Commission: {$output.Calculate_Margin_ServiceResponse[1]/MarginAfterCommission}</parameter>
+                              </input>
+                              <outputDef/>
+                           </subflow>
+                           <link id="ltj208qy" targetId="ltj208qq" type="containerLink"/>
+                        </flow>
+                        <link id="ltj208qv" targetId="ltj208qr" type="containerLink"/>
+                        <link id="ltj208qw" targetId="ltj208qt" type="containerLink"/>
+                     </container>
+                     <link id="ltj208p9" targetId="ltj208p6" type="containerLink"/>
+                  </flow>
+                  <flow id="ltj208pb">
+                     <assignment id="ltj208rf">
+                        <title>Set fault status</title>
+                        <operation source="constant" to="output.Status">Item not in stock. Apologies for the inconvenience.</operation>
+                     </assignment>
+                     <link id="ltj208pc" targetId="ltj208p6" type="containerLink"/>
+                  </flow>
+                  <link id="ltj208p7" targetId="ltj208p8" type="containerLink"/>
+                  <link id="ltj208qp" targetId="c"/>
+                  <events>
+                     <catch faultField="faultInfo" id="ltj208p5" interrupting="true">
+                        <link id="ltj208pa" targetId="ltj208pb" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>9vgesVzO0Cxc4k2e3O6mK8</types1:GUID>
+      <types1:DisplayName>Initiate Order</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-08T23:00:10.588Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

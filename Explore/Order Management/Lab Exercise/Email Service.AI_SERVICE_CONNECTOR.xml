@@ -1,0 +1,144 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ygpKi9zhFtybdua-gt-6693803-2024-03-08T19:44:51.401Z::svc.xml</types1:EntryId>
+      <types1:Name>Email_Service</types1:Name>
+      <types1:ParentFlowIds>abbgdoGsF4Xkgbd-gt-6671405-2024-03-08T19:49:58.013Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Email Service</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
+      <types1:CreationDate>2024-03-08T19:44:51Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala999@gmail.com</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-08T19:48:22Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-08T19:48:42Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/Email_Service/Email_Service_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Email Service"
+                            label=""
+                            name="Email_Service"
+                            uuid="9e4307d4-42c5-4299-842c-bde6c1e27880">
+            <description>Email Service</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Host Name"
+                                    name="hostName"
+                                    required="true"
+                                    testWith="na1.ai.dm-us.informaticacloud.com:443"
+                                    type="string"/>
+               <connectionAttribute description="User Name"
+                                    label="username"
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="testuser2"
+                                    type="string"/>
+               <connectionAttribute description="Password"
+                                    label="password"
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label=""
+                       maxRedirects="100"
+                       name="Email_ServiceOperation"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter description=""
+                                label="body"
+                                name="body"
+                                required="true"
+                                testWith="{ &#34;SendTo&#34;: &#34;testconsumer@mailinator.com&#34;, &#34;Message&#34;: &#34;Test&#34; }"
+                                type="reference">
+                        <options>
+                           <option name="referenceTo">Email_ServiceRequest</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://{$hostName}/active-bpel/rt/Email_Service"
+                                        verb="POST">
+                        <authentication>
+                           <username>{$username}</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="UnwrappedJSON"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Email_ServiceRequest">
+                  <description/>
+                  <detail>
+                     <field name="Message" nullable="true" required="false" type="string"/>
+                     <field name="SendTo" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="string">
+                  <description/>
+                  <detail>
+                     <field name="string" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="boolean">
+                  <detail>
+                     <field name="boolean" nullable="true" required="false" type="boolean"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="double">
+                  <detail>
+                     <field name="double" nullable="true" required="false" type="double"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="integer">
+                  <detail>
+                     <field name="integer" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>f5kAaxQJYyLdL6xzj1FPwy</types1:GUID>
+      <types1:DisplayName>Email Service</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-08T23:00:10.322Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "2OQEkylUAp5gDtagebli6n",
+    "name" : "Get-Margin-Detail",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "IMR7hsAVR3aaa-gt-6689556-2024-03-08T18:39:24.553Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get Margin Detail - App Connection",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-08T23:00:10.776Z",
+  "objectRefs" : [ {
+    "id" : "hhLK8tF7USzfSmHSz17Kct",
+    "name" : "Get Margin Detail",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Vaaa-gt-6666484-2024-03-08T14:16:06.376Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get Margin Detail",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Order Management/Lab Exercise"
+  } ]
+}

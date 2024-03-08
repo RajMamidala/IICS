@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "1glvikf7jfJetyNTI6Vj63",
+    "name" : "Lab Exercise",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This folder is needed for Initiate Order Lab",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-03-08T23:00:10.775Z",
+  "objectRefs" : [ ]
+}

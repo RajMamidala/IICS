@@ -1,0 +1,195 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Vaaa-gt-6666484-2024-03-08T14:16:06.376Z::svc.xml</types1:EntryId>
+      <types1:Name>Get_Margin_Detail</types1:Name>
+      <types1:ParentFlowIds>IMR7hsAVR3aaa-gt-6689556-2024-03-08T18:39:24.553Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Get Margin Detail</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
+      <types1:CreationDate>2024-03-08T14:16:06Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala999@gmail.com</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-08T14:31:55Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-08T14:32:53Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/Get_Margin_Detail/Get_Margin_Detail_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Get Margin Detail"
+                            label=""
+                            name="Get_Margin_Detail"
+                            uuid="27f09fc8-0787-4b3f-9d13-40443e9b3c9c">
+            <description>Get Margin Detail</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Host Name"
+                                    name="hostName"
+                                    required="true"
+                                    testWith="na1.ai.dm-us.informaticacloud.com:443"
+                                    type="string"/>
+               <connectionAttribute description="User Name"
+                                    label="username"
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="testuser2"
+                                    type="string"/>
+               <connectionAttribute description="Password"
+                                    label="password"
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label=""
+                       maxRedirects="100"
+                       name="Calculate_Margin_ServiceOperation"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>This mock service calculates margin for a particular order. For a particular item, this service will provide details on company margin, sales margin and margin per unit.</description>
+                  <input>
+                     <parameter description=""
+                                label="body"
+                                name="body"
+                                required="true"
+                                testWith="{ &#34;ItemSellingPrice&#34;: 100, &#34;ItemCount&#34;: 2, &#34;ItemCostPrice&#34;: 50, &#34;SalesCommissionInPercentage&#34;: 10 }"
+                                type="reference">
+                        <options>
+                           <option name="referenceTo">Calculate_Margin_ServiceRequest</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://{$hostName}/active-bpel/rt/Calculate_Margin_Service"
+                                        verb="POST">
+                        <authentication>
+                           <username>{$username}</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="UnwrappedJSON"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Successful response"
+                            entireResponse="true"
+                            name="Calculate_Margin_ServiceResponse"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">Calculate_Margin_ServiceResponse</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Calculate_Margin_ServiceRequest">
+                  <description/>
+                  <detail>
+                     <field name="ItemSellingPrice"
+                            nullable="true"
+                            required="true"
+                            type="double">
+                        <options/>
+                     </field>
+                     <field name="ItemCount" nullable="true" required="true" type="int">
+                        <options/>
+                     </field>
+                     <field name="ItemCostPrice"
+                            nullable="true"
+                            required="true"
+                            type="double">
+                        <options/>
+                     </field>
+                     <field name="SalesCommissionInPercentage"
+                            nullable="true"
+                            required="true"
+                            type="int">
+                        <options/>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Calculate_Margin_ServiceResponse">
+                  <description/>
+                  <detail>
+                     <field name="MarginPerUnit"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="MarginAfterCommission"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="MarginBeforeCommission"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="SalesCommission"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="string">
+                  <detail>
+                     <field name="string" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="boolean">
+                  <detail>
+                     <field name="boolean" nullable="true" required="false" type="boolean"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="double">
+                  <detail>
+                     <field name="double" nullable="true" required="false" type="double"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="integer">
+                  <detail>
+                     <field name="integer" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>hhLK8tF7USzfSmHSz17Kct</types1:GUID>
+      <types1:DisplayName>Get Margin Detail</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-08T23:00:10.349Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
