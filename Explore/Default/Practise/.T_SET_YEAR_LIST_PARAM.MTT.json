@@ -1,0 +1,108 @@
+{
+  "objectInfo" : {
+    "id" : "9kGp7F5Jnd8jreRxhHE4mZ",
+    "name" : "T_SET_YEAR_LIST_PARAM",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000007"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-19T14:37:26.290Z",
+  "objectRefs" : [ {
+    "id" : "3eKvdt7828ejAeDimc1duv",
+    "name" : "FlatFiles_Win",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Flat Files Windows",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "1ipGRdnKmprhNpZET7Lwul",
+    "name" : "M_SET_YEAR_LIST_PARAM",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC1700000000000J"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  }, {
+    "id" : "7ZpT4rwTjMQkCAE3iUbd4d",
+    "name" : "FlatFiles_Win_Tgt",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0B000000000003"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Flat Files Windows Target",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "6l1RueBxDM4kjpsjcZUWSl",
+    "name" : "DESKTOP-T3DBR06",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC25000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

@@ -1,0 +1,48 @@
+{
+  "objectInfo" : {
+    "id" : "l2SSUaP2VeseNcO1RgJWsM",
+    "name" : "TF_LOOP_DATA_LIST_STATIC",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "SCpwNXHS45bfTQb-gt-14558958-2024-03-17T16:35:24.724Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:37:26.290Z",
+  "objectRefs" : [ {
+    "id" : "gArdEm1HroZgJ3pI8LCzaD",
+    "name" : "T_LOOP_DATA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000005"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  } ]
+}

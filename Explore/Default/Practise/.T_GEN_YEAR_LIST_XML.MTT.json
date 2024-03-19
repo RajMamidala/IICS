@@ -1,0 +1,114 @@
+{
+  "objectInfo" : {
+    "id" : "lW8IREzEtW3ei7nlISpo2F",
+    "name" : "T_GEN_YEAR_LIST_XML",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000008"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-19T14:37:26.291Z",
+  "objectRefs" : [ {
+    "id" : "7xSu6cZHzNulKix13MVpi9",
+    "name" : "M_GEN_YEAR_LIST_XML",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC1700000000000H"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  }, {
+    "id" : "3eKvdt7828ejAeDimc1duv",
+    "name" : "FlatFiles_Win",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Flat Files Windows",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "5LzGtsJo4dAe7R1HA176kZ",
+    "name" : "YearListXML_Hier",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC36000000000006"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  }, {
+    "id" : "6l1RueBxDM4kjpsjcZUWSl",
+    "name" : "DESKTOP-T3DBR06",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC25000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

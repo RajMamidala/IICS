@@ -1,0 +1,71 @@
+{
+  "objectInfo" : {
+    "id" : "aTs31xV9qmKbG5x98DMJub",
+    "name" : "TF_LOOP_DATA_LIST_DYNAMIC",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "NjtaaabbgdoGsF4-gt-16902501-2024-03-17T18:52:50.641Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:37:26.294Z",
+  "objectRefs" : [ {
+    "id" : "9kGp7F5Jnd8jreRxhHE4mZ",
+    "name" : "T_SET_YEAR_LIST_PARAM",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000007"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  }, {
+    "id" : "gArdEm1HroZgJ3pI8LCzaD",
+    "name" : "T_LOOP_DATA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000005"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  } ]
+}

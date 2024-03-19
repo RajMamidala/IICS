@@ -1,0 +1,187 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>BTDbf13ErhNzUze-gt-16740410-2024-03-17T16:02:11.444Z::tf.xml</types1:EntryId>
+      <types1:Name>MT_LOOP_DATA_RANGE</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-17T16:02:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-17T16:02:19Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.MT_LOOP_DATA_RANGE/MT_LOOP_DATA_RANGE.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="MT_LOOP_DATA_RANGE"
+                   name="MT_LOOP_DATA_RANGE"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="Start Year" name="Start_Year" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="End Year" name="End_Year" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="Data Task 1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:T-LOOP-DATA</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ltvp567f" targetId="ltvp567e"/>
+               </start>
+               <assignment id="ltvp567e">
+                  <title>Set Start and End Year Values</title>
+                  <operation source="constant" to="temp.Start_Year">1992</operation>
+                  <operation source="constant" to="temp.End_Year">1998</operation>
+                  <link id="ltvp567p" targetId="ltvp567o"/>
+               </assignment>
+               <assignment id="ltvp569w">
+                  <title>Increment Year</title>
+                  <operation source="formula" to="temp.Start_Year">
+                     <expression language="XQuery">$temp.Start_Year + 1</expression>
+                  </operation>
+                  <link id="ltvp56aa" targetId="ltvp56a8"/>
+               </assignment>
+               <container id="ltvp567o" type="exclusive">
+                  <title>If Start Year great than End Year</title>
+                  <flow id="ltvp567s">
+                     <end id="ltvp568e"/>
+                  </flow>
+                  <flow id="ltvp567v">
+                     <link id="ltvp567w" targetId="ltvp567o" type="containerLink"/>
+                  </flow>
+                  <link id="ltvp567r" targetId="ltvp567s" type="containerLink">
+                     <condition source="formula">
+                        <function name="greater-than">
+                           <arg name="left">{$temp.Start_Year}</arg>
+                           <arg name="right">{$temp.End_Year }</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="ltvp568b" targetId="ltvp568j"/>
+                  <link id="ltvp567u" targetId="ltvp567v" type="containerLink"/>
+               </container>
+               <eventContainer id="ltvp568j">
+                  <service id="ltvp568a">
+                     <title>Data Task 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">T_LOOP_DATA</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">gArdEm1HroZgJ3pI8LCzaD</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="T-LOOP-DATA">temp.Data Task 1</operation>
+                           <operation source="field" to="T-LOOP-DATA/inout[1]/ParamDate">temp.Start_Year</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 1/output/TotalTransErrors">Total Transformation Errors</operation>
+                        <operation source="field" to="temp.Data Task 1/output/FirstErrorCode">First Error Code</operation>
+                        <operation source="field" to="temp.Data Task 1/inout/ParamDate">ParamDate</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="ltvp569x" targetId="ltvp569w"/>
+                  <events>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="ltvp568h"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="ltvp568i"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <jumpTo id="ltvp56a8">
+                  <link id="ltvp56a9" targetId="ltvp567o"/>
+               </jumpTo>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="T-LOOP-DATA"
+                              isByCopy="true"
+                              name="T-LOOP-DATA">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters"
+                            name="inout"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>6FGWtQOqk5tckC4aX1ITcG</types1:GUID>
+      <types1:DisplayName>MT_LOOP_DATA_RANGE</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:37:25.672Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

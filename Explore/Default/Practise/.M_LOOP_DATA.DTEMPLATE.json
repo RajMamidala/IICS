@@ -1,0 +1,68 @@
+{
+  "objectInfo" : {
+    "id" : "8K1eD37AL9MkJzxSm3U5ix",
+    "name" : "M_LOOP_DATA",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC1700000000000I"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-19T14:37:26.297Z",
+  "objectRefs" : [ {
+    "id" : "89X6Wa7KuuLe6t7VbCL1IE",
+    "name" : "Snowflake",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0B000000000004"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Snowflake",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "7ZpT4rwTjMQkCAE3iUbd4d",
+    "name" : "FlatFiles_Win_Tgt",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0B000000000003"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Flat Files Windows Target",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}

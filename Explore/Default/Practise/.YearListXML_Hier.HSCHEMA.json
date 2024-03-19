@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "5LzGtsJo4dAe7R1HA176kZ",
+    "name" : "YearListXML_Hier",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC36000000000006"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-19T14:37:26.288Z",
+  "objectRefs" : [ ]
+}

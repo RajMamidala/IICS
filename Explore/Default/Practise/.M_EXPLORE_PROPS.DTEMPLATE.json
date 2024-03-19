@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "8sYOuqnD5TReKcm3QEiX4g",
+    "id" : "98LdiQsuGb9jqRgcRjrSM6",
     "name" : "M_EXPLORE_PROPS",
     "type" : "DTEMPLATE",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "012GTZ1700000000000F"
+        "repoHandle" : "012IEC17000000000005"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,9 +23,9 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-03-03T15:26:56.430Z",
+  "updateTime" : "2024-03-19T14:37:26.292Z",
   "objectRefs" : [ {
-    "id" : "gmhZmrR4LaFjEhBRQlDk0U",
+    "id" : "89X6Wa7KuuLe6t7VbCL1IE",
     "name" : "Snowflake",
     "type" : "Connection",
     "metadata" : {
@@ -34,7 +34,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "012GTZ0B000000000004"
+        "repoHandle" : "012IEC0B000000000004"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

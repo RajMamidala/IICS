@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "5aB6wnojN7tk5mk2RyFCg9",
+    "id" : "3qQWrtZAMYfldoOhuOS5w0",
     "name" : "M_CDC_01",
     "type" : "DTEMPLATE",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "012GTZ17000000000006"
+        "repoHandle" : "012IEC17000000000004"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,9 +23,9 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-03-03T19:09:16.692Z",
+  "updateTime" : "2024-03-19T14:37:26.296Z",
   "objectRefs" : [ {
-    "id" : "gmhZmrR4LaFjEhBRQlDk0U",
+    "id" : "89X6Wa7KuuLe6t7VbCL1IE",
     "name" : "Snowflake",
     "type" : "Connection",
     "metadata" : {
@@ -34,7 +34,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "012GTZ0B000000000004"
+        "repoHandle" : "012IEC0B000000000004"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
