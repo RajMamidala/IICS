@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "12HahC2QFoycVrNXtOorIg",
+    "name" : "Shared assets",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This Project contains shared assets",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-03-19T14:40:36.367Z",
+  "objectRefs" : [ ]
+}

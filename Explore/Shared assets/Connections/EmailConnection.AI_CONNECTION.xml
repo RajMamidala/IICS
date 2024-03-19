@@ -1,0 +1,59 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>p0Gf1N2H0Fdw8jI-gt-865110-2024-03-18T17:49:12.4Z::conn.xml</types1:EntryId>
+      <types1:Name>EmailConnection</types1:Name>
+      <types1:ParentFlowIds>7muOSSHCwkNmumf-gt-8825838-2024-03-18T17:50:43.944Z::pd.xml,aaa-gt-8825848-2024-03-18T17:50:44.004Z::pd.xml,Uq0gbeCFk4AdypK-gt-865120-2024-03-18T17:49:12.743Z::pd.xml,YYsGuDoWn2sqeEr-gt-865130-2024-03-18T17:49:12.817Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>Password: icrt@1357</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-18T17:49:12Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T17:50:43Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="EmailConnection"
+                     label="EmailConnection"
+                     name="EmailConnection">
+            <description>Password: icrt@1357</description>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false" name="Authentication" value="Enable"/>
+               <attribute encrypted="false" name="hostName" value="smtp.gmail.com"/>
+               <attribute encrypted="false" name="port" value="465"/>
+               <attribute encrypted="false" name="username" value="icrt1357@gmail.com"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="security" value="SSL"/>
+               <attribute encrypted="false" name="connectionTimeout" value="30000"/>
+               <attribute encrypted="false"
+                          name="testToAddress"
+                          value="jmanager@mailinator.com"/>
+               <attribute encrypted="false"
+                          name="fromAddress"
+                          value="jemployee@mailinator.com"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="false"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="Email"
+                           uuid="9a8a03d0-0437-46c4-bedf-70acb4173c1f">
+               <description>Provides connections to email host servers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>bTkeWYPeQgygQjXaKALbuR</types1:GUID>
+      <types1:DisplayName>EmailConnection</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:40:36.184Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

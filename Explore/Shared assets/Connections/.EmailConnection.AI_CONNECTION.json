@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "bTkeWYPeQgygQjXaKALbuR",
+    "name" : "EmailConnection",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "p0Gf1N2H0Fdw8jI-gt-865110-2024-03-18T17:49:12.4Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Password: icrt@1357",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:40:36.367Z",
+  "objectRefs" : [ ]
+}
