@@ -1,0 +1,88 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>yuRZXDyvs7xvk0q-gt-8838744-2024-03-18T19:52:39.391Z::pd.xml</types1:EntryId>
+      <types1:Name>Data_Task_Flow_Orchestration_Sample-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-18T19:52:39Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T20:12:21Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-18T20:12:26Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Data_Task_Flow_Orchestration_Sample-1/Data_Task_Flow_Orchestration_Sample-1.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Data Task Flow Orchestration Sample"
+                  name="Data_Task_Flow_Orchestration_Sample-1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ltxd4k5q" targetId="jc5uxgfm"/>
+               </start>
+               <service id="jc5uxgfm">
+                  <title>Generate Year List XML file</title>
+                  <serviceName>ICSExecuteTask</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">T_GEN_YEAR_LIST_XML [MCT]</parameter>
+                     <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                     <parameter name="Fail on Cloud Task Errors" source="constant">true</parameter>
+                     <parameter name="GUID" source="constant">lW8IREzEtW3ei7nlISpo2F</parameter>
+                  </serviceInput>
+                  <link id="ltxd4k5w" targetId="ltxd4k5v"/>
+               </service>
+               <service id="ltxd4k5v">
+                  <title>Set Year List Parameter</title>
+                  <serviceName>ICSExecuteTask</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">T_SET_YEAR_LIST_PARAM [MCT]</parameter>
+                     <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                     <parameter name="Fail on Cloud Task Errors" source="constant">true</parameter>
+                     <parameter name="GUID" source="constant">9kGp7F5Jnd8jreRxhHE4mZ</parameter>
+                  </serviceInput>
+                  <link id="ltxd4k5x" targetId="jc5uxgfv"/>
+               </service>
+               <service id="jc5uxgfv">
+                  <title>Load Data</title>
+                  <serviceName>ICSExecuteTask</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">T_LOOP_DATA [MCT]</parameter>
+                     <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                     <parameter name="Fail on Cloud Task Errors" source="constant">true</parameter>
+                     <parameter name="GUID" source="constant">gArdEm1HroZgJ3pI8LCzaD</parameter>
+                  </serviceInput>
+                  <link id="jc5uxgfx" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>aFCg2h81KtgjBUzQZiyqy8</types1:GUID>
+      <types1:DisplayName>Data Task Flow Orchestration Sample</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:33:35.796Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

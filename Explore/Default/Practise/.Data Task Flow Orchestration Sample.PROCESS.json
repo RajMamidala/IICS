@@ -1,0 +1,85 @@
+{
+  "objectInfo" : {
+    "id" : "aFCg2h81KtgjBUzQZiyqy8",
+    "name" : "Data Task Flow Orchestration Sample",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "yuRZXDyvs7xvk0q-gt-8838744-2024-03-18T19:52:39.391Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:33:36.088Z",
+  "objectRefs" : [ {
+    "id" : "lW8IREzEtW3ei7nlISpo2F",
+    "name" : "T_GEN_YEAR_LIST_XML",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000008"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  }, {
+    "id" : "9kGp7F5Jnd8jreRxhHE4mZ",
+    "name" : "T_SET_YEAR_LIST_PARAM",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000007"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  }, {
+    "id" : "gArdEm1HroZgJ3pI8LCzaD",
+    "name" : "T_LOOP_DATA",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0Z000000000005"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default/Practise"
+  } ]
+}
