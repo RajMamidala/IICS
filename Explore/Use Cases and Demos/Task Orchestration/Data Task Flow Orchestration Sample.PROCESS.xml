@@ -1,0 +1,66 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>wNXHS45bfTQbdxW-gt-865102-2024-03-18T17:49:12.355Z::pd.xml</types1:EntryId>
+      <types1:Name>Data_Task_Flow_Orchestration_Sample</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-18T17:49:12Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T17:50:43Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Data Task Flow Orchestration Sample"
+                  name="Data_Task_Flow_Orchestration_Sample">
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 9</generator>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jc5uxgfn" targetId="jc5uxgfm"/>
+               </start>
+               <service id="jc5uxgfm">
+                  <title>Copy Users CSV</title>
+                  <serviceName>Data_Task_Flow_Orchestration_Sample_-_CopyUsersCSV</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">MCT_CopyUsersCSV</parameter>
+                     <parameter name="Task Type" source="constant">MCT</parameter>
+                  </serviceInput>
+                  <link id="jc5uxgfw" targetId="jc5uxgfv"/>
+               </service>
+               <service id="jc5uxgfv">
+                  <title>Copy Groups CSV</title>
+                  <serviceName>Data_Task_Flow_Orchestration_Sample_-_CopyGroupsCSV</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">MCT_CopyGroupsCSV</parameter>
+                     <parameter name="Task Type" source="constant">MCT</parameter>
+                  </serviceInput>
+                  <link id="jc5uxgfx" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>jBiKiVCW5ikgawErzlkBgq</types1:GUID>
+      <types1:DisplayName>Data Task Flow Orchestration Sample</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:27.775Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

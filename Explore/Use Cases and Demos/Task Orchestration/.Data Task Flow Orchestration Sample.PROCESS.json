@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "jBiKiVCW5ikgawErzlkBgq",
+    "name" : "Data Task Flow Orchestration Sample",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "wNXHS45bfTQbdxW-gt-865102-2024-03-18T17:49:12.355Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:27.941Z",
+  "objectRefs" : [ ]
+}

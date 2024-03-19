@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "hjayNgdHzKfe0AmCjJII8C",
+    "name" : "Wait For Confirmation",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "sfRabbfTQbdxWq9-gt-865094-2024-03-18T17:49:12.301Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Used for Opportunity to order to get approval from manager. It sends an email with approve or deny links.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:27.942Z",
+  "objectRefs" : [ ]
+}

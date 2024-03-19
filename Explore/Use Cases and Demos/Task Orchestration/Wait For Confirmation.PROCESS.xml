@@ -1,0 +1,159 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>sfRabbfTQbdxWq9-gt-865094-2024-03-18T17:49:12.301Z::pd.xml</types1:EntryId>
+      <types1:Name>Wait_For_Confirmation</types1:Name>
+      <types1:ParentFlowIds>7muOSSHCwkNmumf-gt-8825838-2024-03-18T17:50:43.944Z::pd.xml,aaa-gt-8825848-2024-03-18T17:50:44.004Z::pd.xml,Uq0gbeCFk4AdypK-gt-865120-2024-03-18T17:49:12.743Z::pd.xml,YYsGuDoWn2sqeEr-gt-865130-2024-03-18T17:49:12.817Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>Used for Opportunity to order to get approval from manager. It sends an email with approve or deny links.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-18T17:49:12Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T17:50:43Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Wait For Confirmation"
+                  name="Wait_For_Confirmation">
+            <appliesTo/>
+            <description>Used for Opportunity to order to get approval from manager. It sends an email with approve or deny links.</description>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 9</generator>
+            <input>
+               <parameter description="" name="Run Id" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Task Status" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Success Source Rows" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Failed Source Rows" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Start Time" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="End Time" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Error Message" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Success Target Rows" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Failed Target Rows" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="Answer" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <eventDefinitions>
+               <messageDefinition name="Response">
+                  <input>
+                     <parameter correlationPath="true"
+                                description=""
+                                name="requestId"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                     <parameter description="" name="Answer" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="Ack" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowAnonymousAccess/>
+                        <wholePayload outputWholePayload="true"/>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+            </eventDefinitions>
+            <flow id="a">
+               <start id="b">
+                  <link id="jbyr3o5o" targetId="jbyr3o5n"/>
+               </start>
+               <wait id="jbyr3o5n">
+                  <title>Wait 10 seconds</title>
+                  <duration source="formula">
+                     <function name="duration_expression">
+                        <arg name="value">10</arg>
+                        <arg name="scale">S</arg>
+                        <arg name="businessDays"/>
+                     </function>
+                  </duration>
+                  <link id="jbyr3o5x" targetId="jbyr3o5w"/>
+               </wait>
+               <receive id="jbyr3o5w">
+                  <title>Receive 1</title>
+                  <message refer="Response">
+                     <correlation>
+                        <parameter name="requestId" source="field" updatable="true">input.Run Id</parameter>
+                     </correlation>
+                  </message>
+                  <link id="jbyr3o64" targetId="jbyr3o63"/>
+               </receive>
+               <assignment id="jbyr3o63">
+                  <title>Assignment to Answer</title>
+                  <operation source="field" to="output.Answer">input.Answer</operation>
+                  <link id="jbyr3o65" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>hjayNgdHzKfe0AmCjJII8C</types1:GUID>
+      <types1:DisplayName>Wait For Confirmation</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:27.801Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
