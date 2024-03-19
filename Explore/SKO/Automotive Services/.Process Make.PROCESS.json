@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "cxxLGxcfu4JfhEHGRfTsUQ",
+    "name" : "Process Make",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "rwOQohJvsGRvDIN-gt-627672-2024-03-17T20:39:41.289Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:08.516Z",
+  "objectRefs" : [ ]
+}

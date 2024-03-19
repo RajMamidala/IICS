@@ -1,0 +1,131 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>0WzFBwLjBeE1KoJ-gt-8589264-2024-03-17T20:39:41.99Z::pd.xml</types1:EntryId>
+      <types1:Name>Process_Car_Makes_By_Year</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>Get list of 2017 car makes from Edmunds and call a process on each make.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-17T20:39:42Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T17:48:32Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-18T17:48:36Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process_Car_Makes_By_Year/Process_Car_Makes_By_Year.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process Car Makes By Year"
+                  name="Process_Car_Makes_By_Year"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>Get list of 2017 car makes from Edmunds and call a process on each make.</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="Year_in" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="MakesCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="ModelCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="defaultvalue">0</option>
+                  </options>
+               </field>
+               <field description="" name="ModelCountFromExpression" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="TempModelCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="defaultvalue">0</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="normal">
+               <rest>
+                  <allowedRoles>
+                     <role>Service Consumer</role>
+                  </allowedRoles>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jbxhf6zb" targetId="jbxhf6za"/>
+               </start>
+               <service id="jbxhf6za">
+                  <title>Get Car Makes</title>
+                  <serviceName>Edmunds:getCarMakes</serviceName>
+                  <serviceGUID>6LcNCEChtASgOARyEbQ0mT</serviceGUID>
+                  <serviceInput>
+                     <parameter name="year" source="field" updatable="true">input.Year_in</parameter>
+                  </serviceInput>
+                  <link id="jci0mdc0" targetId="jci0mdbz"/>
+               </service>
+               <assignment id="jci0mdbz">
+                  <title>Initialize the Model Count</title>
+                  <operation source="constant" to="temp.TempModelCount">0</operation>
+                  <link id="jci0mdc1" targetId="jbxhf6zi"/>
+               </assignment>
+               <assignment id="jci0mda5">
+                  <title>Prepare Response</title>
+                  <operation source="formula" to="output.MakesCount">
+                     <expression language="XQuery">list:count($output.MakesResult[1]/makes)</expression>
+                  </operation>
+                  <operation source="field" to="output.ModelCount">temp.TempModelCount</operation>
+                  <operation source="formula" to="output.ModelCountFromExpression">
+                     <expression language="XQuery">list:count($output.MakesResult[1]/makes/models )</expression>
+                  </operation>
+                  <link id="jci0mda7" targetId="c"/>
+               </assignment>
+               <subflow id="jbxhf6zi">
+                  <title>Process Car Makes</title>
+                  <subflowGUID>cxxLGxcfu4JfhEHGRfTsUQ</subflowGUID>
+                  <subflowPath>Process_Make</subflowPath>
+                  <appliesTo>Edmunds:makes</appliesTo>
+                  <appliesToDataName source="field">output.MakesResult[1]/makes</appliesToDataName>
+                  <runForEach>true</runForEach>
+                  <input>
+                     <parameter name="iModelCount" source="field" updatable="true">temp.TempModelCount</parameter>
+                  </input>
+                  <outputDef>
+                     <field name="oModelCount" type="int">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </outputDef>
+                  <link id="jci0mda6" targetId="jci0mda5"/>
+               </subflow>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>hgyw1D2Oa4Yb45ChzcU46d</types1:GUID>
+      <types1:DisplayName>Process Car Makes By Year</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:07.543Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

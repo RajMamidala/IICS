@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "7Lz41TuMkM4cfexwafrrGp",
+    "name" : "OrderProcessor-Procurement",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WFrLWEQT53nQciS-gt-885049-2024-03-18T20:39:20.784Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:08.517Z",
+  "objectRefs" : [ ]
+}

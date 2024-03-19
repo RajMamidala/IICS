@@ -1,0 +1,57 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>WFrLWEQT53nQciS-gt-885049-2024-03-18T20:39:20.784Z::pd.xml</types1:EntryId>
+      <types1:Name>OrderProcessor-Procurement</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-18T20:39:21Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-18T20:50:10Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.OrderProcessor-Procurement/OrderProcessor-Procurement.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="OrderProcessor-Procurement"
+                  name="OrderProcessor-Procurement">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 9</generator>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jbxhx4je" targetId="jbxhx4jd"/>
+               </start>
+               <wait id="jbxhx4jd">
+                  <title>Wait for 30 seconds</title>
+                  <duration source="formula">
+                     <function name="duration_expression">
+                        <arg name="value">30</arg>
+                        <arg name="scale">S</arg>
+                        <arg name="businessDays"/>
+                     </function>
+                  </duration>
+                  <link id="jbxhx4jf" targetId="c"/>
+               </wait>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>7Lz41TuMkM4cfexwafrrGp</types1:GUID>
+      <types1:DisplayName>OrderProcessor-Procurement</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:06.552Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

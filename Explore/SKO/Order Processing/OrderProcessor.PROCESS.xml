@@ -1,0 +1,259 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>rQHqlGwm7iUQbgd-gt-8845906-2024-03-18T20:39:21.277Z::pd.xml</types1:EntryId>
+      <types1:Name>OrderProcessor</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-18T20:39:21Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T20:50:39Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="OrderProcessor"
+                  name="OrderProcessor"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="itemName" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="itemCount" required="true" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="orderId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <eventDefinitions>
+               <messageDefinition name="CheckOrderStatus">
+                  <input>
+                     <parameter correlationPath="."
+                                description=""
+                                name="idOfOrderToCheckStatus"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="orderStatus" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowAnonymousAccess/>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+               <messageDefinition name="CancelOrder">
+                  <input>
+                     <parameter correlationPath="true"
+                                description=""
+                                name="idOfOrderToCancel"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="orderStatus" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowAnonymousAccess/>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+               <messageDefinition name="UpdateOrder">
+                  <input>
+                     <parameter correlationPath="true"
+                                description=""
+                                name="idOfOrderToUpdate"
+                                required="true"
+                                type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                     <parameter description="" name="itemCount" required="true" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <output>
+                     <field description="" name="orderStatus" type="string">
+                        <options>
+                           <option name="required">false</option>
+                        </options>
+                     </field>
+                  </output>
+                  <deployment>
+                     <rest>
+                        <allowAnonymousAccess/>
+                     </rest>
+                  </deployment>
+               </messageDefinition>
+            </eventDefinitions>
+            <flow id="a">
+               <start id="b">
+                  <link id="jbxi0lod" targetId="jbxi0loc"/>
+               </start>
+               <assignment id="jbxi0loc">
+                  <title>Assignment to orderId</title>
+                  <operation source="formula" to="output.orderId">
+                     <expression language="XQuery">infa:getProcessId()</expression>
+                  </operation>
+                  <link id="jbxi0lok" targetId="jbxi0loj"/>
+               </assignment>
+               <milestone id="jbxi0loj">
+                  <title>Reply With Order Info</title>
+                  <link id="jbxi0lop" targetId="jbxi0lp6"/>
+               </milestone>
+               <eventContainer id="jbxi0lp6">
+                  <subflow id="jbxi0loo">
+                     <title>Process Order</title>
+                     <subflowGUID>9uLmXdzMiSPhl4ShWB5mib</subflowGUID>
+                     <subflowPath>OrderProcessor-ProcessPayment</subflowPath>
+                     <runForEach>false</runForEach>
+                     <input/>
+                     <outputDef/>
+                  </subflow>
+                  <flow id="jbxi0lp8">
+                     <eventContainer id="jbxi0lr3">
+                        <service id="jbxi0lqu">
+                           <title>OrderProcessor-Procurement</title>
+                           <serviceName>$none</serviceName>
+                           <serviceGUID/>
+                           <serviceInput/>
+                        </service>
+                        <flow id="jbxi0lr5">
+                           <link id="jbxi0lr6" targetId="jbxi0lr3" type="containerLink"/>
+                        </flow>
+                        <flow id="jbxi0lr8">
+                           <assignment id="jbxi0lt4">
+                              <title>Assignment to orderStatus</title>
+                              <operation source="constant" to="output.orderStatus">Processed payment. Procurement in progress.</operation>
+                              <link id="jbxi0lt5" targetId="jbxi0lrc"/>
+                           </assignment>
+                           <end id="jbxi0lrc">
+                              <title>Reply to Check Order Status</title>
+                           </end>
+                        </flow>
+                        <link id="jbxi0lr4" targetId="jbxi0lr5" type="containerLink"/>
+                        <events>
+                           <message id="jbxi0lr2" refer="CheckOrderStatus">
+                              <correlation>
+                                 <parameter name="idOfOrderToCheckStatus" source="field" updatable="true">output.orderId</parameter>
+                              </correlation>
+                              <link id="jbxi0lr7" targetId="jbxi0lr8" type="containerLink"/>
+                           </message>
+                        </events>
+                     </eventContainer>
+                     <link id="jbxi0lp9" targetId="jbxi0lp6" type="containerLink"/>
+                  </flow>
+                  <flow id="jbxi0lpb">
+                     <assignment id="jbxi0lqg">
+                        <title>Assignment to orderStatus</title>
+                        <operation source="constant" to="output.orderStatus">Processing payment.</operation>
+                        <link id="jbxi0lqh" targetId="jbxi0lpf"/>
+                     </assignment>
+                     <end id="jbxi0lpf">
+                        <title>Reply to Check Order Status</title>
+                     </end>
+                  </flow>
+                  <flow id="jbxi0lpj">
+                     <assignment id="jbxi0lrt">
+                        <title>Assignment to orderStatus</title>
+                        <operation source="constant" to="output.orderStatus">Order Updated.</operation>
+                        <link id="jbxi0lru" targetId="jbxi0lpn"/>
+                     </assignment>
+                     <end id="jbxi0lpn">
+                        <title>Reply to Update Order</title>
+                     </end>
+                  </flow>
+                  <flow id="jbxi0lpr">
+                     <assignment id="jbxi0lsi">
+                        <title>Assignment to orderStatus</title>
+                        <operation source="constant" to="output.orderStatus">Order cancelled.</operation>
+                        <link id="jbxi0lsj" targetId="jbxi0lpv"/>
+                     </assignment>
+                     <milestone id="jbxi0lpv">
+                        <title>Reply To Message Event</title>
+                     </milestone>
+                     <link id="jbxi0ltw" targetId="jbxi0lp6" type="containerLink"/>
+                  </flow>
+                  <link id="jbxi0lp7" targetId="jbxi0lp8" type="containerLink"/>
+                  <link id="jbxi0lty" targetId="jbxi0ltx"/>
+                  <events>
+                     <message id="jbxi0lp5" refer="CheckOrderStatus">
+                        <correlation>
+                           <parameter name="idOfOrderToCheckStatus" source="field" updatable="true">output.orderId</parameter>
+                        </correlation>
+                        <link id="jbxi0lpa" targetId="jbxi0lpb" type="containerLink"/>
+                     </message>
+                     <message id="jbxi0lph" refer="UpdateOrder">
+                        <correlation>
+                           <parameter name="idOfOrderToUpdate" source="field" updatable="true">output.orderId</parameter>
+                        </correlation>
+                        <link id="jbxi0lpi" targetId="jbxi0lpj" type="containerLink"/>
+                     </message>
+                     <message id="jbxi0lpp" interrupting="true" refer="CancelOrder">
+                        <correlation>
+                           <parameter name="idOfOrderToCancel" source="field" updatable="true">output.orderId</parameter>
+                        </correlation>
+                        <link id="jbxi0lpq" targetId="jbxi0lpr" type="containerLink"/>
+                     </message>
+                  </events>
+               </eventContainer>
+               <end id="jbxi0ltx">
+                  <title>End 2</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>4qWevHmbbVJenroXnmjk8I</types1:GUID>
+      <types1:DisplayName>OrderProcessor</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:07.176Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "i91WqN3JJmhgJG6NLuzW4i",
+    "name" : "SKO",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This project contains demos be used for SKO 2018",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-03-19T14:41:08.519Z",
+  "objectRefs" : [ ]
+}

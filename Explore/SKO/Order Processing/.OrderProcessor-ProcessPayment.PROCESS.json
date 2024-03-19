@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "9uLmXdzMiSPhl4ShWB5mib",
+    "name" : "OrderProcessor-ProcessPayment",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "TF2n3wOLIFvukNX-gt-885041-2024-03-18T20:39:20.738Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:08.522Z",
+  "objectRefs" : [ ]
+}

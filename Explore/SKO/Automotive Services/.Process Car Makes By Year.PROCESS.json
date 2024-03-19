@@ -1,0 +1,65 @@
+{
+  "objectInfo" : {
+    "id" : "hgyw1D2Oa4Yb45ChzcU46d",
+    "name" : "Process Car Makes By Year",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0WzFBwLjBeE1KoJ-gt-8589264-2024-03-17T20:39:41.99Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get list of 2017 car makes from Edmunds and call a process on each make.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:08.524Z",
+  "objectRefs" : [ {
+    "id" : "cxxLGxcfu4JfhEHGRfTsUQ",
+    "name" : "Process Make",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "rwOQohJvsGRvDIN-gt-627672-2024-03-17T20:39:41.289Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/SKO/Automotive Services"
+  }, {
+    "id" : "6LcNCEChtASgOARyEbQ0mT",
+    "name" : "Edmunds",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "oyRUDv2vSx0aa-gt-627662-2024-03-17T20:39:41.232Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/SKO/Automotive Services"
+  } ]
+}

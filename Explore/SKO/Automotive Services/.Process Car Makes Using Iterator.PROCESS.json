@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "8aE63auuZmOdoGDi0CHYaL",
+    "name" : "Process Car Makes Using Iterator",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "6gg8vHWOMzeHbcj-gt-8589254-2024-03-17T20:39:41.933Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get list of 2014 car makes from Edmunds and call a process on each make.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-19T14:41:08.518Z",
+  "objectRefs" : [ {
+    "id" : "6LcNCEChtASgOARyEbQ0mT",
+    "name" : "Edmunds",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "oyRUDv2vSx0aa-gt-627662-2024-03-17T20:39:41.232Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/SKO/Automotive Services"
+  } ]
+}

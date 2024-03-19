@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "axzRDb88oTHg4PeCrTXwsW",
+    "name" : "Order Processing",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Example: Callback processing",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-03-19T14:41:08.520Z",
+  "objectRefs" : [ ]
+}

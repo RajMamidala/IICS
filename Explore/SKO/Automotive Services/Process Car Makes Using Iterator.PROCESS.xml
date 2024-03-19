@@ -1,0 +1,169 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>6gg8vHWOMzeHbcj-gt-8589254-2024-03-17T20:39:41.933Z::pd.xml</types1:EntryId>
+      <types1:Name>Process_Car_Makes_Using_Iterator</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>Get list of 2014 car makes from Edmunds and call a process on each make.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-17T20:39:42Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-18T17:28:41Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-18T17:28:48Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process_Car_Makes_Using_Iterator/Process_Car_Makes_Using_Iterator.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process Car Makes Using Iterator"
+                  name="Process_Car_Makes_Using_Iterator"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>Get list of 2014 car makes from Edmunds and call a process on each make.</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="Year_in" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="MakesCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="ModelCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="defaultvalue">0</option>
+                  </options>
+               </field>
+               <field description="" name="ModelCountFromExpression" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="TempModelCount" type="int">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="defaultvalue">0</option>
+                  </options>
+               </field>
+               <field description="" name="List of Makes" type="reference">
+                  <options>
+                     <option name="referenceTo">Edmunds:makes</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">6LcNCEChtASgOARyEbQ0mT</option>
+                  </options>
+               </field>
+               <field description="" name="Current Make" type="reference">
+                  <options>
+                     <option name="referenceTo">Edmunds:makes</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">6LcNCEChtASgOARyEbQ0mT</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="normal">
+               <rest>
+                  <allowedRoles>
+                     <role>Service Consumer</role>
+                  </allowedRoles>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jbxhf6zb" targetId="jbxhf6za"/>
+               </start>
+               <service id="jbxhf6za">
+                  <title>Get Car Makes</title>
+                  <serviceName>Edmunds:getCarMakes</serviceName>
+                  <serviceGUID>6LcNCEChtASgOARyEbQ0mT</serviceGUID>
+                  <serviceInput>
+                     <parameter name="year" source="field" updatable="true">input.Year_in</parameter>
+                  </serviceInput>
+                  <link id="jci5yy09" targetId="jci5yy08"/>
+               </service>
+               <assignment id="jci5yy08">
+                  <title>Store Result in a temp variable</title>
+                  <operation source="field" to="temp.List of Makes">output.MakesResult[1]/makes</operation>
+                  <link id="jci5yy0a" targetId="jci5lve8"/>
+               </assignment>
+               <assignment id="jci5lve8">
+                  <title>Set Current Make</title>
+                  <operation source="formula" to="temp.Current Make">
+                     <expression language="XQuery">list:head($temp.ListofMakes)</expression>
+                  </operation>
+                  <link id="jci5lvfi" targetId="jci5lvfh"/>
+               </assignment>
+               <container id="jci5lvfh" type="exclusive">
+                  <title>Current Make</title>
+                  <flow id="jci5lvfl">
+                     <assignment id="jci5lvgv">
+                        <title>Remove First Item</title>
+                        <operation source="formula" to="temp.List of Makes">
+                           <expression language="XQuery">list:tail($temp.ListofMakes)</expression>
+                        </operation>
+                        <link id="jci5lvhv" targetId="jci5lvht"/>
+                     </assignment>
+                     <jumpTo id="jci5lvht">
+                        <link id="jci5lvhu" targetId="jci5lve8"/>
+                     </jumpTo>
+                  </flow>
+                  <flow id="jci5lvfo">
+                     <assignment id="jci5lvhj">
+                        <title>Prepare Response</title>
+                        <operation source="formula" to="output.MakesCount">
+                           <expression language="XQuery">list:count($output.MakesResult[1]/makes)</expression>
+                        </operation>
+                        <operation source="formula" to="output.ModelCount">
+                           <expression language="XQuery">list:count($output.MakesResult[1]/makes/models)</expression>
+                        </operation>
+                        <operation source="formula" to="output.ModelCountFromExpression">
+                           <expression language="XQuery">list:count($output.MakesResult[1]/makes/models)</expression>
+                        </operation>
+                     </assignment>
+                     <link id="jci5lvfp" targetId="jci5lvfh" type="containerLink"/>
+                  </flow>
+                  <link id="jci5lvfk" targetId="jci5lvfl" type="containerLink">
+                     <condition source="formula">
+                        <function name="set">
+                           <arg name="field">{$temp.CurrentMake}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jci5lvfn" targetId="jci5lvfo" type="containerLink">
+                     <condition source="formula">
+                        <function name="unset">
+                           <arg name="field">{$temp.CurrentMake}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="jci5lvhi" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>8aE63auuZmOdoGDi0CHYaL</types1:GUID>
+      <types1:DisplayName>Process Car Makes Using Iterator</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:07.563Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
