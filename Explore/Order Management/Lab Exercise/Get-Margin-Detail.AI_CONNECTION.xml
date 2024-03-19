@@ -1,9 +1,9 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>IMR7hsAVR3aaa-gt-6689556-2024-03-08T18:39:24.553Z::conn.xml</types1:EntryId>
+      <types1:EntryId>GD4teIssjqluQga-gt-511244-2024-03-16T23:42:06.152Z::conn.xml</types1:EntryId>
       <types1:Name>Get-Margin-Detail</types1:Name>
-      <types1:ParentFlowIds>kSQciSrZMSPfXBi-gt-6398203-2024-03-07T19:11:29.165Z::pd.xml</types1:ParentFlowIds>
+      <types1:ParentFlowIds>VFJ2oTVMTonQYWe-gt-8474146-2024-03-16T23:42:10.771Z::pd.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+connection</types1:MimeType>
       <types1:Description>Get Margin Detail - App Connection</types1:Description>
       <types1:AppliesTo/>
@@ -11,13 +11,10 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
-      <types1:CreationDate>2024-03-08T18:39:25Z</types1:CreationDate>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-16T23:42:06Z</types1:CreationDate>
       <types1:ModifiedBy/>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
-      <types1:PublicationDate>2024-03-08T18:39:51Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/rt.connection/Get-Margin-Detail/Get-Margin-Detail.conn.xml</types1:PublishedContributionId>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
@@ -35,7 +32,7 @@
             <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
                                agentOnly="false"
                                connectorPath="project:/rt.connector/Get_Margin_Detail/Get_Margin_Detail_svcDef.xml"
-                               guid="hhLK8tF7USzfSmHSz17Kct"
+                               guid="59NB0lxF8M6jPgkj7oHgcz"
                                name="Get_Margin_Detail"
                                supportsConnectionTest="false"
                                uuid="27f09fc8-0787-4b3f-9d13-40443e9b3c9c">
@@ -43,8 +40,8 @@
             </businessConnector>
          </connection>
       </types1:Entry>
-      <types1:GUID>2OQEkylUAp5gDtagebli6n</types1:GUID>
+      <types1:GUID>6Jdo32uHKOUg97ZAecMIuA</types1:GUID>
       <types1:DisplayName>Get-Margin-Detail</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2024-03-08T23:00:10.432Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:53.136Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

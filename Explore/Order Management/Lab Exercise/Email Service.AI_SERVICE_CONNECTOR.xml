@@ -1,9 +1,8 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>ygpKi9zhFtybdua-gt-6693803-2024-03-08T19:44:51.401Z::svc.xml</types1:EntryId>
+      <types1:EntryId>uk1SwEYrwn2H0Fd-gt-8474091-2024-03-16T23:42:04.633Z::svc.xml</types1:EntryId>
       <types1:Name>Email_Service</types1:Name>
-      <types1:ParentFlowIds>abbgdoGsF4Xkgbd-gt-6671405-2024-03-08T19:49:58.013Z::conn.xml</types1:ParentFlowIds>
       <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
       <types1:Description>Email Service</types1:Description>
       <types1:AppliesTo/>
@@ -11,13 +10,12 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
-      <types1:CreationDate>2024-03-08T19:44:51Z</types1:CreationDate>
-      <types1:ModifiedBy>RajMamidala999@gmail.com</types1:ModifiedBy>
-      <types1:ModificationDate>2024-03-08T19:48:22Z</types1:ModificationDate>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-16T23:42:05Z</types1:CreationDate>
+      <types1:ModifiedBy/>
       <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
-      <types1:PublicationDate>2024-03-08T19:48:42Z</types1:PublicationDate>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-18T18:12:37Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/rt.connector/Email_Service/Email_Service_svcDef.xml</types1:PublishedContributionId>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -137,8 +135,8 @@
             </objects>
          </businessConnector>
       </types1:Entry>
-      <types1:GUID>f5kAaxQJYyLdL6xzj1FPwy</types1:GUID>
+      <types1:GUID>hU5c6ZUmoM3g2rVQgCECso</types1:GUID>
       <types1:DisplayName>Email Service</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2024-03-08T23:00:10.322Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:53.032Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

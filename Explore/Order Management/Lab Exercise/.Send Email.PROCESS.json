@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "7QfpfGY9pAIiYEaJEe8jk0",
+    "id" : "c0RCoQshgq9jppocktWDoQ",
     "name" : "Send Email",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "QNvgeDXJqEhynzY-gt-6672607-2024-03-08T20:09:31.682Z::pd.xml"
+        "repoHandle" : "LGeNTYglxbdypKw-gt-511284-2024-03-16T23:42:10.604Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.777Z",
+  "updateTime" : "2024-03-19T14:41:53.376Z",
   "objectRefs" : [ {
-    "id" : "9sdA9bk2MgVbKjPKZEMHIX",
+    "id" : "gInXyV6FKWhgWYl4xHozym",
     "name" : "Email-Service",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "abbgdoGsF4Xkgbd-gt-6671405-2024-03-08T19:49:58.013Z::conn.xml"
+        "repoHandle" : "fRpB7O2htghGZ5i-gt-511254-2024-03-16T23:42:06.208Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

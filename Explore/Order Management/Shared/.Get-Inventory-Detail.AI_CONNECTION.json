@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "5NFjvmUjrVTh3Ah2OTT02p",
+    "id" : "6UQXHNUt4aee8pvBviAgyw",
     "name" : "Get-Inventory-Detail",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "4LoWSjrabcmWR7h-gt-6392978-2024-03-07T18:29:33.892Z::conn.xml"
+        "repoHandle" : "PCOkSSHCwkNmumf-gt-511264-2024-03-16T23:42:06.267Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.778Z",
+  "updateTime" : "2024-03-19T14:41:53.377Z",
   "objectRefs" : [ {
-    "id" : "i36ckAAcZexczTyrF6NXEH",
+    "id" : "1zOdfYIr4zAd0oA88pApc7",
     "name" : "Get Inventory Detail",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "x59clzHfSTu0kMV-gt-6417339-2024-03-07T18:29:33.7Z::svc.xml"
+        "repoHandle" : "fRpB7O2htghGZ5i-gt-8474107-2024-03-16T23:42:04.708Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

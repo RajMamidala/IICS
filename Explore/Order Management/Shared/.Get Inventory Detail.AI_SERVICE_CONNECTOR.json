@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "i36ckAAcZexczTyrF6NXEH",
+    "id" : "1zOdfYIr4zAd0oA88pApc7",
     "name" : "Get Inventory Detail",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "x59clzHfSTu0kMV-gt-6417339-2024-03-07T18:29:33.7Z::svc.xml"
+        "repoHandle" : "fRpB7O2htghGZ5i-gt-8474107-2024-03-16T23:42:04.708Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,6 +20,6 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.777Z",
+  "updateTime" : "2024-03-19T14:41:53.378Z",
   "objectRefs" : [ ]
 }

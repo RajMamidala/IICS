@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "hhLK8tF7USzfSmHSz17Kct",
+    "id" : "59NB0lxF8M6jPgkj7oHgcz",
     "name" : "Get Margin Detail",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "Vaaa-gt-6666484-2024-03-08T14:16:06.376Z::svc.xml"
+        "repoHandle" : "1qig0zFMi4tciSr-gt-8474123-2024-03-16T23:42:04.784Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,6 +20,6 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.776Z",
+  "updateTime" : "2024-03-19T14:41:53.375Z",
   "objectRefs" : [ ]
 }

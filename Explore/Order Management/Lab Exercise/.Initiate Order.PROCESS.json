@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "9vgesVzO0Cxc4k2e3O6mK8",
+    "id" : "8t3OeXsLmuBbFLuNlnvmKS",
     "name" : "Initiate Order",
     "type" : "PROCESS",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "kSQciSrZMSPfXBi-gt-6398203-2024-03-07T19:11:29.165Z::pd.xml"
+        "repoHandle" : "VFJ2oTVMTonQYWe-gt-8474146-2024-03-16T23:42:10.771Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,29 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.777Z",
+  "updateTime" : "2024-03-19T14:41:53.376Z",
   "objectRefs" : [ {
-    "id" : "2OQEkylUAp5gDtagebli6n",
-    "name" : "Get-Margin-Detail",
-    "type" : "AI_CONNECTION",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 1,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "IMR7hsAVR3aaa-gt-6689556-2024-03-08T18:39:24.553Z::conn.xml"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : "Get Margin Detail - App Connection",
-        "contentType" : "application/json; charset=utf-8",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Order Management/Lab Exercise"
-  }, {
-    "id" : "7QfpfGY9pAIiYEaJEe8jk0",
+    "id" : "c0RCoQshgq9jppocktWDoQ",
     "name" : "Send Email",
     "type" : "PROCESS",
     "metadata" : {
@@ -51,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "QNvgeDXJqEhynzY-gt-6672607-2024-03-08T20:09:31.682Z::pd.xml"
+        "repoHandle" : "LGeNTYglxbdypKw-gt-511284-2024-03-16T23:42:10.604Z::pd.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -62,7 +42,7 @@
     },
     "path" : "/Explore/Order Management/Lab Exercise"
   }, {
-    "id" : "5NFjvmUjrVTh3Ah2OTT02p",
+    "id" : "6UQXHNUt4aee8pvBviAgyw",
     "name" : "Get-Inventory-Detail",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -71,7 +51,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "4LoWSjrabcmWR7h-gt-6392978-2024-03-07T18:29:33.892Z::conn.xml"
+        "repoHandle" : "PCOkSSHCwkNmumf-gt-511264-2024-03-16T23:42:06.267Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -81,5 +61,25 @@
       }
     },
     "path" : "/Explore/Order Management/Shared"
+  }, {
+    "id" : "6Jdo32uHKOUg97ZAecMIuA",
+    "name" : "Get-Margin-Detail",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GD4teIssjqluQga-gt-511244-2024-03-16T23:42:06.152Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get Margin Detail - App Connection",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Order Management/Lab Exercise"
   } ]
 }

@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "9sdA9bk2MgVbKjPKZEMHIX",
+    "id" : "gInXyV6FKWhgWYl4xHozym",
     "name" : "Email-Service",
     "type" : "AI_CONNECTION",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "abbgdoGsF4Xkgbd-gt-6671405-2024-03-08T19:49:58.013Z::conn.xml"
+        "repoHandle" : "fRpB7O2htghGZ5i-gt-511254-2024-03-16T23:42:06.208Z::conn.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,9 +20,9 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.778Z",
+  "updateTime" : "2024-03-19T14:41:53.378Z",
   "objectRefs" : [ {
-    "id" : "f5kAaxQJYyLdL6xzj1FPwy",
+    "id" : "hU5c6ZUmoM3g2rVQgCECso",
     "name" : "Email Service",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -31,7 +31,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "ygpKi9zhFtybdua-gt-6693803-2024-03-08T19:44:51.401Z::svc.xml"
+        "repoHandle" : "uk1SwEYrwn2H0Fd-gt-8474091-2024-03-16T23:42:04.633Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

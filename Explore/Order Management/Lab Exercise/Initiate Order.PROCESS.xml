@@ -1,7 +1,7 @@
 <aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
                    xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
    <types1:Item>
-      <types1:EntryId>kSQciSrZMSPfXBi-gt-6398203-2024-03-07T19:11:29.165Z::pd.xml</types1:EntryId>
+      <types1:EntryId>VFJ2oTVMTonQYWe-gt-8474146-2024-03-16T23:42:10.771Z::pd.xml</types1:EntryId>
       <types1:Name>Initiate_Order</types1:Name>
       <types1:MimeType>application/xml+process</types1:MimeType>
       <types1:Description/>
@@ -10,14 +10,10 @@
       <types1:VersionLabel>1.0</types1:VersionLabel>
       <types1:State>CURRENT</types1:State>
       <types1:ProcessGroup/>
-      <types1:CreatedBy>RajMamidala999@gmail.com</types1:CreatedBy>
-      <types1:CreationDate>2024-03-07T19:11:29Z</types1:CreationDate>
-      <types1:ModifiedBy>RajMamidala999@gmail.com</types1:ModifiedBy>
-      <types1:ModificationDate>2024-03-08T21:15:39Z</types1:ModificationDate>
-      <types1:PublicationStatus>published</types1:PublicationStatus>
-      <types1:PublishedBy>RajMamidala999@gmail.com</types1:PublishedBy>
-      <types1:PublicationDate>2024-03-08T21:15:43Z</types1:PublicationDate>
-      <types1:PublishedContributionId>project:/spi.Initiate_Order/Initiate_Order.pd.xml</types1:PublishedContributionId>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-16T23:42:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
          <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
@@ -97,7 +93,7 @@
                      <option name="referenceTo">Get-Margin-Detail:Calculate_Margin_ServiceRequest</option>
                      <option name="required">false</option>
                      <option name="isCopy">true</option>
-                     <option name="guid">2OQEkylUAp5gDtagebli6n</option>
+                     <option name="guid">6Jdo32uHKOUg97ZAecMIuA</option>
                   </options>
                </field>
             </tempFields>
@@ -117,7 +113,7 @@
                   <service id="lthljdtt">
                      <title>Get Inventory Detail</title>
                      <serviceName>Get-Inventory-Detail:getInventoryDetail</serviceName>
-                     <serviceGUID>5NFjvmUjrVTh3Ah2OTT02p</serviceGUID>
+                     <serviceGUID>6UQXHNUt4aee8pvBviAgyw</serviceGUID>
                      <serviceInput>
                         <parameter name="ItemName" source="field" updatable="true">input.ItemName</parameter>
                      </serviceInput>
@@ -143,7 +139,7 @@
                      <service id="ltj208q8">
                         <title>Get Margin Detail</title>
                         <serviceName>Get-Margin-Detail:Calculate_Margin_ServiceOperation</serviceName>
-                        <serviceGUID>2OQEkylUAp5gDtagebli6n</serviceGUID>
+                        <serviceGUID>6Jdo32uHKOUg97ZAecMIuA</serviceGUID>
                         <serviceInput>
                            <parameter name="body" source="field">temp.InventoryDetails</parameter>
                         </serviceInput>
@@ -154,7 +150,7 @@
                         <flow id="ltj208qr">
                            <subflow id="ltj208qs">
                               <title>Send Email to Consumer</title>
-                              <subflowGUID>7QfpfGY9pAIiYEaJEe8jk0</subflowGUID>
+                              <subflowGUID>c0RCoQshgq9jppocktWDoQ</subflowGUID>
                               <subflowPath>Send_Email</subflowPath>
                               <runForEach>false</runForEach>
                               <input>
@@ -168,7 +164,7 @@
                         <flow id="ltj208qt">
                            <subflow id="ltj208qu">
                               <title>Send Email to Vendor</title>
-                              <subflowGUID>7QfpfGY9pAIiYEaJEe8jk0</subflowGUID>
+                              <subflowGUID>c0RCoQshgq9jppocktWDoQ</subflowGUID>
                               <subflowPath>Send_Email</subflowPath>
                               <runForEach>false</runForEach>
                               <input>
@@ -203,8 +199,8 @@
             </flow>
          </process>
       </types1:Entry>
-      <types1:GUID>9vgesVzO0Cxc4k2e3O6mK8</types1:GUID>
+      <types1:GUID>8t3OeXsLmuBbFLuNlnvmKS</types1:GUID>
       <types1:DisplayName>Initiate Order</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2024-03-08T23:00:10.588Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2024-03-19T14:41:53.261Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>

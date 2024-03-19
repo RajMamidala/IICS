@@ -1,6 +1,6 @@
 {
   "objectInfo" : {
-    "id" : "f5kAaxQJYyLdL6xzj1FPwy",
+    "id" : "hU5c6ZUmoM3g2rVQgCECso",
     "name" : "Email Service",
     "type" : "AI_SERVICE_CONNECTOR",
     "metadata" : {
@@ -9,7 +9,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "ygpKi9zhFtybdua-gt-6693803-2024-03-08T19:44:51.401Z::svc.xml"
+        "repoHandle" : "uk1SwEYrwn2H0Fd-gt-8474091-2024-03-16T23:42:04.633Z::svc.xml"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -20,6 +20,6 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-08T23:00:10.777Z",
+  "updateTime" : "2024-03-19T14:41:53.377Z",
   "objectRefs" : [ ]
 }
