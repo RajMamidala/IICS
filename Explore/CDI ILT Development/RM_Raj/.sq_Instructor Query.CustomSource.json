@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "fQAm24h4EC9gfJr5RVP2Eh",
+    "name" : "sq_Instructor Query",
+    "type" : "CustomSource",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "012IEC0M000000000002"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "sq Instructor Query",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-03-24T11:21:11.516Z",
+  "objectRefs" : [ ]
+}
