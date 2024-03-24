@@ -1,0 +1,94 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>xV4AdypKwKBqRi9-gt-1110473-2024-03-19T17:24:33.384Z::pd.xml</types1:EntryId>
+      <types1:Name>Process1-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:DESKTOP-T3DBR06</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-19T17:24:33Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-19T19:04:07Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-19T18:45:05Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process1-1/Process1-1.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process1"
+                  name="Process1-1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:DESKTOP-T3DBR06</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="delimitedContent" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">FileAppConnection:DelimitedContent</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">jsyX5OZfp0kdI3ke5AcYow</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="output" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="TempOutput" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <targetLocation>DESKTOP-T3DBR06</targetLocation>
+               <event eventSource="FileAppConnection:DelimitedContentParser"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ltyn2t22" targetId="ltyn2t21"/>
+               </start>
+               <assignment id="ltyn2t21">
+                  <title>Assignment to TempOutput</title>
+                  <operation source="formula" to="temp.TempOutput">
+                     <expression language="XQuery">let $lines := $input.delimitedContent[1]/record
+let $fieldnames:=tokenize($lines[1], '\s*,\s*')
+return
+$fieldnames</expression>
+                  </operation>
+                  <link id="ltyprf1b" targetId="ltyprf1a"/>
+               </assignment>
+               <service id="ltyprf1a">
+                  <title>FileWriter</title>
+                  <serviceName>FileWriterAppConnection:FileWriter</serviceName>
+                  <serviceGUID>hUBHjcS6loxfQVnJijpT4C</serviceGUID>
+                  <serviceInput>
+                     <parameter name="fileWriteTask" source="field"/>
+                  </serviceInput>
+                  <link id="ltyprf1c" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>bE37E0XCjCQbvfgfziM6Wu</types1:GUID>
+      <types1:DisplayName>Process1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-24T11:24:23.673Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

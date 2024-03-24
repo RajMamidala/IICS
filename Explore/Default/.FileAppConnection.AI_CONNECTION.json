@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "jsyX5OZfp0kdI3ke5AcYow",
+    "name" : "FileAppConnection",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "J9ARJi4tciSrZMS-gt-9082044-2024-03-19T18:32:38.574Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-24T11:24:27.111Z",
+  "objectRefs" : [ ]
+}

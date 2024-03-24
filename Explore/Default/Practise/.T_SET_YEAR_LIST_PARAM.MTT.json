@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-03-19T14:37:26.290Z",
+  "updateTime" : "2024-03-24T11:24:27.112Z",
   "objectRefs" : [ {
     "id" : "3eKvdt7828ejAeDimc1duv",
     "name" : "FlatFiles_Win",
@@ -56,7 +56,10 @@
       "repoInfo" : {
         "repoHandle" : "012IEC1700000000000J"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",

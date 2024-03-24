@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "hUBHjcS6loxfQVnJijpT4C",
+    "name" : "FileWriterAppConnection",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "MfOC2XZPnE29Em2-gt-1118223-2024-03-19T19:01:30.617Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-03-24T11:24:27.108Z",
+  "objectRefs" : [ ]
+}

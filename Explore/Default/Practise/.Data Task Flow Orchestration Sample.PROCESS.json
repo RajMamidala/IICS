@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2024-03-19T14:33:36.088Z",
+  "updateTime" : "2024-03-24T11:24:27.115Z",
   "objectRefs" : [ {
     "id" : "lW8IREzEtW3ei7nlISpo2F",
     "name" : "T_GEN_YEAR_LIST_XML",
@@ -33,7 +33,10 @@
       "repoInfo" : {
         "repoHandle" : "012IEC0Z000000000008"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
@@ -53,7 +56,10 @@
       "repoInfo" : {
         "repoHandle" : "012IEC0Z000000000007"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
@@ -73,7 +79,10 @@
       "repoInfo" : {
         "repoHandle" : "012IEC0Z000000000005"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",

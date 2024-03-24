@@ -1,0 +1,64 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>MfOC2XZPnE29Em2-gt-1118223-2024-03-19T19:01:30.617Z::conn.xml</types1:EntryId>
+      <types1:Name>FileWriterAppConnection</types1:Name>
+      <types1:ParentFlowIds>xV4AdypKwKBqRi9-gt-1110473-2024-03-19T17:24:33.384Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:DESKTOP-T3DBR06</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>RajMamidala03</types1:CreatedBy>
+      <types1:CreationDate>2024-03-19T19:01:31Z</types1:CreationDate>
+      <types1:ModifiedBy>RajMamidala03</types1:ModifiedBy>
+      <types1:ModificationDate>2024-03-19T19:01:53Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>RajMamidala03</types1:PublishedBy>
+      <types1:PublicationDate>2024-03-19T19:02:01Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/FileWriterAppConnection/FileWriterAppConnection.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="FileWriterAppConnection"
+                     label="FileWriterAppConnection"
+                     name="FileWriterAppConnection">
+            <description/>
+            <tags>.agent:DESKTOP-T3DBR06</tags>
+            <agent>DESKTOP-T3DBR06</agent>
+            <producers>
+               <producer enabled="true" name="FileWriter" typeName="FileWriter">
+                  <description>Use this event target to write output to a file.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="directoryName" value="C:\Raj\TgtFiles"/>
+                     <attribute encrypted="false" name="fileExist" value="Override"/>
+                     <attribute encrypted="false" name="moveExisting" value=""/>
+                     <attribute encrypted="false" name="eagerDeleteTargetFile" value="true"/>
+                     <attribute encrypted="false" name="tempPrefix" value=""/>
+                     <attribute encrypted="false" name="tempFileName" value=""/>
+                     <attribute encrypted="false" name="forceWrites" value="true"/>
+                     <attribute encrypted="false" name="bufferSize" value=""/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           supportsPublishSkipMetadataRefresh="false"
+                           type="File"
+                           uuid="ac000300-d9fe-11e4-8830-0800200c9a66">
+               <description>Provides connections to file monitoring brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>hUBHjcS6loxfQVnJijpT4C</types1:GUID>
+      <types1:DisplayName>FileWriterAppConnection</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-03-24T11:24:23.264Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
